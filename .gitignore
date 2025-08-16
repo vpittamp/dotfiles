@@ -1,0 +1,44 @@
+# Backup files
+*~
+*.bak
+*.backup
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Private/sensitive files
+*.secret
+*.private
+secrets/
+
+# Logs
+*.log
+
+# Node/Yarn
+node_modules/
+.npm/
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.pnp.*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Neovim
+nvim/.config/nvim/plugin/
+nvim/.config/nvim/.netrwhist
