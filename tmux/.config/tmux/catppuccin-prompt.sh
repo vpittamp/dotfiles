@@ -174,9 +174,12 @@ export GREP_OPTIONS='--color=auto'
 # Catppuccin-themed LS colors
 export LS_COLORS='di=1;34:ln=1;36:so=1;35:pi=33:ex=1;32:bd=34;46:cd=34;43:su=0;41:sg=0;46:tw=0;42:ow=0;43'
 
-# Set terminal title to show current directory
+# Set terminal title to show current directory (only when not in tmux)
 function set_terminal_title() {
-    echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/#$HOME/~}\007"
+    # Skip setting terminal title when inside tmux to avoid escape sequence issues
+    if [ -z "$TMUX" ]; then
+        echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/#$HOME/~}\007"
+    fi
 }
 
 # Add to PROMPT_COMMAND
