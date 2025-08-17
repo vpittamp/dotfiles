@@ -40,5 +40,11 @@ __pycache__/
 venv/
 
 # Neovim
-nvim/.config/nvim/plugin/
-nvim/.config/nvim/.netrwhist
+neovim/.config/nvim/plugin/
+neovim/.config/nvim/.netrwhist
+
+# Tmux plugins (managed by TPM)
+.config/tmux/plugins/
+.claude/
+.codex/
+.vscode-server/
